@@ -1,0 +1,27 @@
+@mixin breakpoint ($size) {
+    
+    @if $size ==xs {
+        @media screen and (max-width: 575px) {
+            @content;
+        }
+    }
+
+    @if $size ==sm {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @if $size ==md {
+        @media screen and (max-width: 991px) {
+            @content;
+        }
+    }
+
+    @if $size ==lg {
+        @media screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+}

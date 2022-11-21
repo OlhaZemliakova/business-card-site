@@ -1,0 +1,99 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.about-us {
+    .container {
+        background-color: $pink-medium;
+        border-radius: 50px;
+        padding: 75px 70px;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint(lg) {
+            padding: 65px 60px;
+        }
+
+        @include breakpoint(md) {
+            padding: 30px 40px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include breakpoint(sm) {
+            padding: 25px 20px;
+        }
+
+        @include breakpoint(xs) {
+            padding: 15px 10px;
+        }
+    }
+
+    &__thumb {
+        width: 100%;
+        margin-right: 130px;
+
+        @include breakpoint(lg) {
+            margin-right: 80px;
+        }
+
+        @include breakpoint(md) {
+            margin-right: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        @include breakpoint(sm) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+
+        img {
+            @include breakpoint(md) {
+                max-width: 250px;
+                width: 100%;
+            }
+
+            @include breakpoint(sm) {
+                max-width: 240px;
+            }
+
+            @include breakpoint(xs) {
+                max-width: 230px;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 500px;
+
+        @include breakpoint(lg) {
+            max-width: 100%;
+        }
+
+        @include breakpoint(md) {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+
+            @include breakpoint(lg) {
+                margin-bottom: 38px;
+            }
+
+            @include breakpoint(md) {
+                margin-bottom: 30px;
+            }
+
+            @include breakpoint(sm) {
+                margin-bottom: 25px;
+            }
+
+            @include breakpoint(xs) {
+                margin-bottom: 18px;
+            }
+        }
+    }
+}

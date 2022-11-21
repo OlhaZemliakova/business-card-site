@@ -1,0 +1,135 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.reviews {
+    .container {
+        background-color: $blue-medium;
+        border-radius: 50px;
+        background-image: url("/assets/images/bg-reviews.svg");
+        padding: 80px 70px;
+
+        @include breakpoint(md) {
+            padding: 50px 60px;
+        }
+
+        @include breakpoint(sm) {
+            padding: 20px 30px;
+        }
+
+        @include breakpoint(xs) {
+            padding: 15px 20px;
+        }
+    }
+
+    h2 {
+        color: $dark-gray;
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include breakpoint(lg) {
+            margin-bottom: 70px;
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint(sm) {
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint(xs) {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .col {
+        @include breakpoint(lg) {
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(md) {
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(sm) {
+            margin-right: 0;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        background-color: white;
+        border: 1px solid $violet;
+        border-radius: 50px;
+        padding: 50px 30px;
+        max-width: 465px;
+        width: 100%;
+        height: 300px;
+
+        @include breakpoint(md) {
+            padding: 30px 20px;
+            overflow: scroll;
+            flex-direction: row-reverse;
+        }
+
+        @include breakpoint(sm) {
+            padding: 20px 15px;
+            max-width: 100%;
+            height: 250px;
+        }
+
+        @include breakpoint(xs) {
+            padding: 15px 10px;
+        }
+
+
+        .avatar {
+            margin-right: 15px;
+            max-width: 90px;
+            width: 100%;
+
+            @include breakpoint(sm) {
+                max-width: 70px;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .card__content {
+            .name {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+                color: $violet-dark;
+                margin-bottom: 2px;
+            }
+
+            .link {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 0.01em;
+                color: $violet;
+                margin-bottom: 19px;
+                display: block;
+            }
+        }
+    }
+}

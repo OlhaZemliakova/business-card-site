@@ -1,0 +1,224 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.features {
+    padding: 120px 0;
+
+    @include breakpoint(lg) {
+        padding: 100px 0;
+    }
+
+    @include breakpoint(md) {
+        padding: 60px 0;
+    }
+
+    @include breakpoint(sm) {
+        padding: 50px 0;
+    }
+
+    @include breakpoint(xs) {
+        padding: 40px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        max-width: 638px;
+        width: 100%;
+        margin-bottom: 80px;
+
+        @include breakpoint(lg) {
+            margin-bottom: 60px;
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: 40px;
+            max-width: 100%;
+        }
+
+        @include breakpoint(sm) {
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint(xs) {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 50px;
+
+            @include breakpoint(lg) {
+                margin-bottom: 40px;
+            }
+
+            @include breakpoint(md) {
+                margin-bottom: 30px;
+            }
+
+            @include breakpoint(sm) {
+                margin-bottom: 25px;
+            }
+
+            @include breakpoint(xs) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .row {
+        margin-bottom: 50px;
+
+        @include breakpoint(lg) {
+            margin-bottom: 40px;
+        }
+
+        @include breakpoint(md) {
+            margin-bottom: 50px;
+            margin-top: 105px;
+        }
+
+        @include breakpoint(sm) {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .col {
+            display: flex;
+            justify-content: end;
+
+            @include breakpoint(md) {
+                justify-content: space-between;
+                margin-right: 28px;
+
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+
+            @include breakpoint(sm) {
+                justify-content: center;
+                margin-top: 115px;
+            }
+
+            @include breakpoint(xs) {
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+
+            img {
+                position: absolute;
+                bottom: 110px;
+                left: -170px;
+                width: 100%;
+                max-width: 230px;
+
+                @include breakpoint(lg) {
+                    max-width: 180px;
+                    left: -82px;
+                    bottom: 120px;
+                }
+
+                @include breakpoint(md) {
+                    max-width: 200px;
+                    top: -115px;
+                    left: calc(50% - 100px);
+                }
+
+                @include breakpoint(sm) {
+                    max-width: 180px;
+                    top: -105px;
+                    left: calc(50% - 100px);
+                }
+
+                @include breakpoint(xs) {
+                    display: none;
+                }
+            }
+
+            .card {
+                border-radius: 50px;
+                padding: 62px 70px 62px 100px;
+                position: relative;
+                max-width: 400px;
+                width: 100%;
+                height: 400px;
+
+                @include breakpoint(md) {
+                    padding: 52px 60px;
+                }
+
+                @include breakpoint(sm) {
+                    padding: 20px 20px;
+                    max-width: 100%;
+                    height: 250px;
+                }
+
+                @include breakpoint(xs) {
+                    padding: 15px 20px;
+                }
+
+                &--light-grean {
+                    background-color: $light-green;
+                    background-image: url("/assets/images/bg-image-1.svg");
+                    background-repeat: no-repeat;
+                }
+
+                &--light-violet {
+                    background-color: $light-violet;
+                    background-image: url("/assets/images/bg-image-2.svg");
+                    background-repeat: no-repeat;
+                }
+
+                &--light-pink {
+                    background-color: $light-pink;
+                    background-image: url("/assets/images/bg-image-3.svg");
+                    background-repeat: no-repeat;
+                }
+
+                &--light-blue {
+                    background-color: $light-blue;
+                    background-image: url("/assets/images/bg-image-4.svg");
+                    background-repeat: no-repeat;
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+
+                    h3 {
+                        margin-bottom: 20px;
+                    }
+
+                    a {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 26px;
+                        letter-spacing: 0.005em;
+                        color: $violet-dark;
+                        position: absolute;
+                        bottom: 0;
+
+                        .icon-arrow {
+                            color: $violet;
+                            margin-left: 20px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
